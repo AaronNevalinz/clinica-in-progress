@@ -15,3 +15,7 @@ Route::get('/patientInfo', function () {
     return view('patient.patientInfo');
 });
 
+// react page
+Route::get('/admin', function () {
+    return view('admin');  // The admin dashboard using React
+});   // Allow React to handle internal routing
