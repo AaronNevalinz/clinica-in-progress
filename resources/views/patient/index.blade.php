@@ -28,7 +28,7 @@
                     <img src="assets/img/footer logo.png" alt="" class="mb-12 w-[200px]">
 
                     <!-- patient form -->
-                    <form action="/appointment" method='POST' class="flex-1 space-y-4">
+                    <form action="/patientInfo" method='POST' class="flex-1 space-y-4">
                         <section class="mb-6 space-y-4">
                             <h1 class="header text-black text-3xl">Hi there 👋🏿</h1>
                             <p class="text-grey">Get started with appointments.</p>
@@ -63,7 +63,9 @@
                         </div>
 
                         <div>
-                            <input class='border-0 outline-none px-1 flex-1 placeholder:text-dark-700 py-2 mt-10 rounded-md text-black font-bold text-xl cursor-pointer text-center bg-primary w-full'  type="submit" value="Get Started">
+                            <a href="/patientInfo">
+                                <input class='border-0 outline-none px-1 flex-1 placeholder:text-dark-700 py-2 mt-10 rounded-md text-black font-bold text-xl cursor-pointer text-center bg-primary w-full'  type="submit" value="Get Started">
+                            </a>
                         </div>
                     </form>
 
