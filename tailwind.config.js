@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
+    "./resources/**/*.jsx",
     "./resources/**/*.vue",
   ],
   theme: {
@@ -17,16 +18,18 @@ module.exports = {
       lg: '960px',
       xl: '1330px'
     },
-    extend: {
+    extend: { 
       colors: {
         primary: '#BF1541',
         secondary: '#ECBBC8',
         transParent: "rgba(0,0,0,0.5)",
+        bgAdmin: "#E7E7E7",
+        lightPrimary: 'rgba(91, 82,82,0.44)',
         accent: {
           DEFAULT: '#F5DDE3',
           secondary: '#18abbc',
           tertiary: '#90c6cd',
-          quaternary: '#E7F1F2'
+          quaternary: '#E7E7E7'
         },
         grey: '#767676'
       },
