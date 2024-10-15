@@ -9,6 +9,7 @@ import Divider from './components/Divider'
 import Messages from './pages/Messages';
 import Patients from './pages/Patients';
 import Settings from './pages/Settings';
+import PatientDetails from './pages/PatientDetails';
 
 
 const App = () => {
@@ -29,7 +30,7 @@ const App = () => {
                             <Route path='/messages' element={<Messages/>} />
                             <Route path='/patients' element={<Patients/>} />
                             <Route path='/settings' element={<Settings/>} />
-                            {/* <DashBoard /> */}
+                            <Route path='/patientdetails' element={<PatientDetails/>} />
                         </Routes>
                     </div>
                 </div>

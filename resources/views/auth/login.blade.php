@@ -25,55 +25,57 @@
                 
                 <div class="sub-container max-w-[496px]">
 
-                    <img src="assets/img/footer logo.png" alt="" class="mb-12 w-[200px]">
+                    <img src="assets/img/footer logo.png" alt="" class="mb-10 w-[200px]">
 
                     <!-- patient form -->
-                    <form action="/patientInfo" method='POST' class="flex-1 space-y-4">
-                        <section class="mb-6 space-y-4">
-                            <h1 class="header text-black text-3xl">Hi there 👋🏿</h1>
+                    <form action="/login" method='POST' class="flex-1 space-y-2">
+                        @csrf
+                        <section class="mb-6">
+                            <h1 class="header text-black text-xl">Hi there 👋🏿</h1>
                             <p class="text-grey">Get started with appointments.</p>
                         </section>
-
-                        <div>
-                            <label for="" class="text-black font-semibold">Full name:</label>
-                            <div class='flex mt-2 text-black border-grey bg-grey rounded-md border py-2'>
-                                <img src="assets/icons/user.svg" alt="" class="mx-2">
-                                <input  name='fname' type="text" placeholder='Eg: Aaron Nevalinz' class='border-0 text-base outline-none bg-grey text-black px-1 flex-1 placeholder:text-secondary'>
-                            </div>
-                        </div>
 
                         <div>
                             <label for="" class="text-black font-semibold">Email Address:</label>:</label>
                             <div class='flex text-dark-700 mt-2 border-grey bg-grey rounded-md border py-2'>
                                 <img src="assets/icons/email.svg" alt="" class="mx-2">
-                                <input name='email' type="text" placeholder='Eg: nevalinz@encoretechnologies.com' class='border-0 outline-none text-black bg-grey px-1 flex-1 placeholder:text-secondary'>
+                                <input name='email' value="{{old('email')}}" type="text" placeholder='Eg: nevalinz@encoretechnologies.com' class='border-0 outline-none text-black bg-grey px-1 flex-1 placeholder:text-secondary'>
                             </div>
+                            @error('email')
+                                <p class="text-primary">{{ $message}}</p>
+                            @enderror
                         </div>
-                        
                         <div>
-                            <label for="" class="text-black font-semibold">Phone Number:</label>:</label>
+                            <label for="" class="text-black font-semibold">Password:</label>:</label>
                             <div class='flex text-dark-700 mt-2 border-grey bg-grey rounded-md border py-2'>
-                                <!-- <img src="./assets/icons/phone.svg" alt="" class="mx-2 w-2 h-2"> -->
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-2 mx-2 fill-black" width="22">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-                                </svg>
-                                
-                                <input name='phone' type="text" placeholder='Eg: +256-777-306-662' class='border-0 outline-none bg-grey px-1 text-black flex-1 placeholder:text-secondary'>
+                                <input name='password' type="password" class='border-0 outline-none text-black bg-grey px-4 flex-1 placeholder:text-secondary'>
                             </div>
+                            @error('password')
+                                <p class="text-primary">{{ $message}}</p>
+                            @enderror
                         </div>
 
                         <div>
-                            <a href="/patientInfo">
-                                <input class='border-0 outline-none px-1 flex-1 placeholder:text-dark-700 py-2 mt-10 rounded-md text-black font-bold text-xl cursor-pointer text-center bg-primary w-full'  type="submit" value="Get Started">
-                            </a>
+                            <input type="checkbox" name="remember" id="remember">
+                            <label for="remember" class="text-black">Remember me</label>
+                        </div>
+
+                        @error('failed')
+                            <p class="text-primary">{{ $message}}</p>
+                        @enderror
+
+                        <div>
+                            <input class='border-0 outline-none px-1 flex-1 placeholder:text-dark-700 py-2 mt-5 rounded-md text-black font-bold text-xl cursor-pointer text-center bg-primary w-full'  type="submit" value="Login">
                         </div>
                     </form>
 
-                    <div class="text-14-regular mt-8 flex justify-between">
+                    <div class="text-14-regular mt-10 flex justify-between">
                         <p class="justify-items-end text-dark-600 xl:text-left">
-                            © 2024 CarePulse
+                            © 2024 Clinica
                         </p>
-                        <p href="" id="admin" class="text-primary font-bold">Admin</p>
+                        <p class="text-primary font-medium text-base underline">
+                            <a href="/register">Register</a>
+                        </p>
                     </div>
                 </div>
 

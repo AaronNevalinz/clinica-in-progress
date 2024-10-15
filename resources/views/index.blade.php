@@ -1,152 +1,7 @@
 @extends('layout.layout')
 
 @section('content')
-  <!-- HEADER -->
-  <header class="py-8 lg:pt-6 lg:pb-14 bg-primary lg:fixed w-full z-10">
-    <div class="container mx-auto lg:relative flex flex-col lg:flex-row lg:justify-between gap-y-4 lg:gap-y-0">
-      <!-- LOGO -->
-      <div class="flex justify-center lg:justify-normal">
-        <img src="assets/img/logo small.png" class="w-[200px]" alt="">
-      </div>
-      <div class="flex flex-col gap-y-4  lg:flex-row lg:gap-x-5 lg:gap-y-0 items-center">
-        <!-- LOCATION -->
-        <div class="flex gap-x-2">
-          <i class="ri-map-pin-2-fill text-2xl text-accent"></i>
-          <div class="text-white">123 Bukasa, Entebbe, UG</div>
-        </div>
-        <!-- PHONE -->
-        <div class="flex gap-x-2">
-          <i class="ri-phone-fill text-2xl text-accent"></i>
-          <div class="text-white">(+256) 777 306 662</div>
-        </div>
-        <!-- BOOK NOW BUTTON -->
-        <a href="/patientReg" target="_blank" class="btn btn-sm btn-outline w-[240px] 
-        lg:2-auto mx-auto lg:mx-0 font-bold">Book now</a>
-        <!-- MOBILE NAV -->
-        <nav class="mnav fixed top-0 -left-[300px] h-full w-[300px] 
-        bg-[#ECBBC8] lg:hidden shadow-2xl transition-all duration-300 z-20">
-          <div class="mnav_close_btn bg-primary w-8 lg:w-[45px] 
-          relative -right-full lg:-right-[45px] top-8 
-          flex justify-center items-center rounded-tr-lg rounded-br-lg cursor-pointer
-          transition-all">
-            <i class="mnav_close_btn_icon ri-arrow-right-s-line text-black text-2xl"></i>
-          </div>
-          <!-- LOGO, LIST, FORM -->
-          <div class="px-12 flex flex-col gap-y-12 h-full">
-            <!-- LOGO -->
-            <a href="#">
-              <div class="flex justify-center lg:justify-normal">
-                <h1 class="text-5xl lg:text-left font-bold relative">In<b class="text-accent">sove</b><br />
-                  <small
-                    class="text-secondary text-[12px] font-normal absolute top-[2.7rem] left-0 lg:text-[12px]">Medical
-                    Healthcare</small>
-                </h1>
-              </div>
-            </a>
-            <!-- LIST -->
-            <ul>
-              <li>
-                <a href="#home" class="text-secondary hover:text-accent transition-all
-                  duration-300">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#doctors" class="text-secondary hover:text-accent transition-all
-                  duration-300">
-                  Doctors
-                </a>
-              </li>
-              <li>
-                <a href="#" class="text-secondary hover:text-accent transition-all
-                  duration-300">
-                  Department
-                </a>
-              </li>
-              <li>
-                <a href="#" class="text-secondary hover:text-accent transition-all
-                  duration-300">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#" class="text-secondary hover:text-accent transition-all
-                  duration-300">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" class="text-secondary hover:text-accent transition-all
-                  duration-300">
-                  Contact
-                </a>
-              </li>
-            </ul>
-            <!-- FORM -->
-            <form action="#" class="relative flex gap-x-[10px]">
-              <label for="mnav-search-input">
-                <i class="ri-search-line text-accent text-2xl"></i>
-              </label>
-              <input type="text" id="mnav-search-input" placeholder="Search..."
-                class="outline-none w-[160px] border-b-2 focus:border-b-2 focus:border-accent placeholder:italic">
-            </form>
-          </div>
-        </nav>
-        <!-- DESKTOP NAV -->
-        <nav class="bg-white  absolute w-full left-0 -bottom-[86px] shadow-md
-        h-16 rounded-[10px] hidden lg:flex lg:items-center lg:justify-between lg:px-[50px]">
-          <!-- LIST -->
-          <ul class="flex gap-x-4 text-black font-bold">
-            <li>
-              <a href="#home" class="border-r pr-4  hover:text-primary transition-all
-                duration-300">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#doctors" class="border-r pr-4  hover:text-primary transition-all
-                duration-300">
-                Doctors
-              </a>
-            </li>
-            <li>
-              <a href="#" class="border-r pr-4  hover:text-primary transition-all
-                duration-300">
-                Department
-              </a>
-            </li>
-            <li>
-              <a href="#" class="border-r pr-4  hover:text-primary transition-all
-                duration-300">
-                Services
-              </a>
-            </li>
-            <li>
-              <a href="#" class="border-r pr-4  hover:text-primary transition-all
-                duration-300">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a href="" class=" hover:text-primary transition-all
-                duration-300">
-                Contact
-              </a>
-            </li>
-          </ul>
-          <!-- FORM -->
-          <form action="#" class="relative flex gap-x-[10px]">
-            <label for="mnav-search-input" class="flex justify-center group">
-              <i class="ri-search-line text-black text-2xl"></i>
-            </label>
-            <input type="text" id="mnav-search-input" placeholder="Search..." class="outline-none w-[100px] focus:w-[180px] focus:border-b-2 
-            focus:border-black placeholder:italic placeholder:text-base 
-            transition-all duration-150">
-          </form>
-        </nav>
-      </div>
-    </div>
-  </header>
+
 
   <!-- HERO -->
   <section class="hero bg-[#ECBBC8] lg:relative top-36 py-12 xl:pt-12 xl:pb-0 overflow-hidden" id="home">
@@ -167,7 +22,7 @@
           Every denture that you place represents your practice. We understand that when your reputation is on the line, you want top quality from a trusted dental Laboratory.
         </P>
         <!-- BTN -->
-        <a href="/patientReg" target="_blank" class="btn btn-sm lg:w-[320px] btn-accent 
+        <a href="{{route('appointment.index')}}" class="btn btn-sm lg:w-[320px] btn-accent 
         mx-auto lg:mx-0">Book an Appointment</a>
       </div>
       <!-- IMAGE -->
@@ -297,7 +152,7 @@
               <span>Book a cleaning every 6 months and we'll refill your whitening gel</span>
               </li>
           </ul>
-          <a href="#" class="bg-primary mt-6 text-white font-bold text-xl py-5 px-10 rounded-full hover:bg-[#ECBBC8] hover:text-black">
+          <a href="{{route('appointment.index')}}" class="bg-primary mt-6 text-white font-bold text-xl py-5 px-10 rounded-full hover:bg-[#ECBBC8] hover:text-black">
               Book Appointment
           </a>
       </div>
@@ -412,7 +267,7 @@
         <div class="swiper-wrapper">
           <!-- Slide1 -->
           <div class="swiper-slide">
-            <div class="flex flex-col md:flex-row gap-9">
+            <div class="flex flex-col md:flex-row gap-9 text-grey">
               <!-- ITEM 1-->
               <div class="flex-1 flex flex-col lg:flex-row">
                 <div class="flex flex-col lg:flex-row items-center gap-[30px]">
@@ -432,6 +287,8 @@
                     <!-- DESCRIPTION -->
                     <p class="mb-[26px] max-2-[320px]">
                       I’m a dentist because it has always been my desire to help people in a healthcare environment. Growing up in my dad’s and uncle’s dental office, I learned early on that dentistry was going to be my path.</p>
+
+                      <a href="{{route('appointment.index')}}"  class="text-center text-black bg-primary mb-3 rounded-md py-1">Book Appointment</a>
                     <!-- SOCIAL -->
                     <div class="flex items-center text-[30px] gap-x-5 text-black">
                       <a href="#" class="cursor-pointer hover:text-primary transition-all">
@@ -469,6 +326,8 @@
                     <!-- DESCRIPTION -->
                     <p class="font mb-[26px] max-2-[320px]">
                       I chose dentistry because I wanted to follow in my parents’ footsteps. Growing up in their office, I came to see how dentistry blends art and science in such a beautiful way, and how it can make a huge impact on people’s health and wellbeing.</p>
+
+                      <a href="{{route('appointment.index')}}"  class="text-center text-black bg-primary mb-3 rounded-md py-1">Book Appointment</a>
                     <!-- SOCIAL -->
                     <div class="flex items-center text-[30px] gap-x-5 text-black">
                       <a href="#" class="cursor-pointer hover:text-primary transition-all">
@@ -511,6 +370,8 @@
                     <!-- DESCRIPTION -->
                     <p class="font mb-[26px] max-2-[320px]">
                       Dentistry has always been dear to me, as I was exposed to it at a very young age watching my grandfather treat patients in rural Oklahoma. Dentistry offers the unique opportunity to build lifelong relationships, while also providing a service that improves people’s quality of life.</p>
+
+                      <a href="{{route('appointment.index')}}"  class="text-center text-black bg-primary mb-3 rounded-md py-1">Book Appointment</a>
                     <!-- SOCIAL -->
                     <div class="flex items-center text-[30px] gap-x-5 text-black">
                       <a href="#" class="cursor-pointer hover:text-primary transition-all">
@@ -549,6 +410,8 @@
                     <p class="font mb-[26px] max-2-[320px]">
                       My passion for dentistry started with a life-changing mission trip to Panama. Since then, I’ve volunteered in many countries, deepening my skills and love for the field. With roots in Central and South America, I’m excited to serve our community as a bilingual speaker.
                     </p>
+
+                    <a href="{{route('appointment.index')}}"  class="text-center text-black bg-primary mb-3 rounded-md py-1">Book Appointment</a>
                     <!-- SOCIAL -->
                     <div class="flex items-center text-[30px] gap-x-5 text-black">
                       <a href="#" class="cursor-pointer hover:text-primary transition-all">

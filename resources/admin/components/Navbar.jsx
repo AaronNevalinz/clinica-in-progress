@@ -5,10 +5,10 @@ import Notif from './Notif'
 
 function Navbar() {
   return (
-    <div className='text-black flex justify-between px-10  h-16 gap-10'>
+    <div className='text-primary flex justify-between px-10  h-16 gap-10'>
       <div className='flex items-center gap-2'>
-        <RiDashboardHorizontalFill  className='size-4'/>
-        <p>Dashboard Overview</p>
+        <RiDashboardHorizontalFill  className='size-4 fill-primary'/>
+        <p className='font-bold'>Dashboard Overview</p>
       </div>
 
       <div className='flex gap-5 items-center'>

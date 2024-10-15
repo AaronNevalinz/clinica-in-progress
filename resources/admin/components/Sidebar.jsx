@@ -14,7 +14,7 @@ function Sidebar() {
     <div className='w-[270px] h-screen bg-white pt-1 relative col-span-1'>
         <div className='flex justify-between items-center px-3 pb-4'>
             <img src={logo} className='w-[150px]' alt="" />
-            <RiMenu3Fill className='text-black size-8 cursor-pointer'/>
+            <RiMenu3Fill className='text-primary size-6 cursor-pointer'/>
         </div>  
 
         
@@ -24,26 +24,50 @@ function Sidebar() {
             <ul>
                 <Link to="/">
                     <li className='flex gap-3 items-center hover:bg-secondary p-3 cursor-pointer'>
-                        <RiDashboardHorizontalFill className='text-black size-6 cursor-pointer' />
-                        <p className='text-lg text-black'>Overview</p>
+                        <RiDashboardHorizontalFill className='text-primary size-6 cursor-pointer' />
+                        <p className='text-sm font-bold text-primary'>Overview</p>
                     </li>
                 </Link>
                 <Link to="/messages">
                     <li className='flex gap-3 items-center hover:bg-secondary p-3 cursor-pointer'>
-                        <TbMessageCircleFilled className='text-black size-6 cursor-pointer' />
-                        <p className='text-lg text-black'>Messages</p>
+                        <TbMessageCircleFilled className='text-primary size-6 cursor-pointer' />
+                        <p className='text-sm text-primary font-bold'>Appointments</p>
                     </li>
                 </Link>
                 <Link to="/patients">
                     <li className='flex gap-3 items-center hover:bg-secondary p-3 cursor-pointer'>
-                        <FaPeopleGroup className='text-black size-6 cursor-pointer' />
-                        <p className='text-lg text-black'>Patients</p>
+                        <FaPeopleGroup className='text-primary size-6 cursor-pointer' />
+                        <p className='font-bold text-sm text-primary'>Create Appointment</p>
                     </li>
                 </Link>
                 <Link to="/settings">
                     <li className='flex gap-3 items-center hover:bg-secondary p-3 cursor-pointer'>
-                        <IoSettings className='text-black size-6 cursor-pointer' />
-                        <p className='text-lg text-black'>Settings</p>
+                        <IoSettings className='text-primary size-6 cursor-pointer' />
+                        <p className='text-sm text-primary font-bold'>Department</p>
+                    </li>
+                </Link>
+                <Link to="/patientdetails">
+                    <li className='flex gap-3 items-center hover:bg-secondary p-3 cursor-pointer'>
+                        <IoSettings className='text-primary size-6 cursor-pointer' />
+                        <p className='text-sm text-primary font-bold'>Doctors</p>
+                    </li>
+                </Link>
+                <Link to="/patientdetails">
+                    <li className='flex gap-3 items-center hover:bg-secondary p-3 cursor-pointer'>
+                        <IoSettings className='text-primary size-6 cursor-pointer' />
+                        <p className='text-sm text-primary font-bold'>Patients</p>
+                    </li>
+                </Link>
+                <Link to="/patientdetails">
+                    <li className='flex gap-3 items-center hover:bg-secondary p-3 cursor-pointer'>
+                        <IoSettings className='text-primary size-6 cursor-pointer' />
+                        <p className='text-sm text-primary font-bold'>Manage Adminx</p>
+                    </li>
+                </Link>
+                <Link to="/patientdetails">
+                    <li className='flex gap-3 items-center hover:bg-secondary p-3 cursor-pointer'>
+                        <IoSettings className='text-primary size-6 cursor-pointer' />
+                        <p className='text-sm text-primary font-bold'>Manage Website</p>
                     </li>
                 </Link>
             </ul>

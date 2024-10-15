@@ -16,7 +16,9 @@ h5,
 h6 {
   @apply text-primary leading-[120%];
 }
-
+.round-btn{
+  @apply w-8 h-8 overflow-auto rounded-full bg-slate-100 focus:outline-none focus:ring-1 focus:ring-slate-100 focus:ring-offset-2 focus:ring-offset-primary;
+}
 .h1 {
   @apply text-[36px] xl:text-[64px] font-semibold;
 }

@@ -9,5 +9,17 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+     // configuration of server
+    server:{
+        proxy:{
+          '/api':{
+            target:'http://127.0.0.1:8000',
+            changeOrigin: true,
+            headers:{
+              Accept:'application/json',
+              "content-Type":'application/json'
+            }
+          }
+        }
+      }
 });
-

@@ -1,19 +1,29 @@
 <?php
 
+use App\Http\Controllers\AppointmentController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('index');
+Route::view('/', 'index')->name('home');
+
+Route::middleware('guest')->group(function(){
+    Route::view('/login', 'auth.login')->middleware('guest')->name('login');
+    Route::post('/login', [AuthController::class, 'login']);
+    Route::view('/register', 'auth.register')->middleware('guest');
+    Route::post('/register', [AuthController::class, 'register']);
 });
 
 
-Route::get('/patientReg', function () {
-    return view('patient.index');
+Route::middleware('auth')->group(function(){
+    // Route::view('/dashboard', 'auth.dashboard')->name('dasboard');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dasboard');
+    // Route::view('/book', 'auth.book')->name('book');
+    // Route::post('/book', [AppointmentController::class, 'store']);    
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::resource('appointment', AppointmentController::class);
 });
 
-Route::get('/patientInfo', function () {
-    return view('patient.patientInfo');
-});
 
 // react page
 Route::get('/admin', function () {
