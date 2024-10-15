@@ -2,7 +2,7 @@
 
 <h1 style='font-size:35px; text-align:center; font-weight:800;'> Clinica - Patient Appointment Management System </h1>
 
-[desktop screen shot view](readme/clinicagithub.png)
+<img src='readme/clinicagithub.png' />
 
 
 <span style='font-size:24px; color:#BF1541'>**Clinica**</span> is a web-based patient appointment management system that allows patients to schedule appointments with doctors, admins to manage users and appointments, and doctors to be notified of scheduled appointments. This project is built using Laravel for the backend, with plain Blade templates for the main website, and ReactJS for the admin and doctor dashboards. The system is fully responsive, utilizing TailwindCSS along with vanilla CSS and JavaScript.
